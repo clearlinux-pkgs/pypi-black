@@ -1,0 +1,2 @@
+pypi(aiohttp)
+pypi(aiohttp_cors)
