@@ -19,7 +19,7 @@ BuildRequires : buildreq-distutils3
 Provides: black
 Provides: black-python
 Provides: black-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pypi(click)
 BuildRequires : pypi(mypy_extensions)
@@ -33,7 +33,7 @@ BuildRequires : pypi(wheel)
 BuildRequires : pytest
 BuildRequires : tox
 BuildRequires : typed_ast
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 Patch1: 0001-drop-upper-version-reqs.patch
 
 %description
