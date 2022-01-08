@@ -4,7 +4,7 @@
 #
 Name     : pypi-black
 Version  : 21.12b0
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/f7/60/7a9775dc1b81a572eb26836c7e77c92bf454ada00693af4b2d2f2614971a/black-21.12b0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/60/7a9775dc1b81a572eb26836c7e77c92bf454ada00693af4b2d2f2614971a/black-21.12b0.tar.gz
 Summary  : The uncompromising code formatter.
@@ -14,26 +14,23 @@ Requires: pypi-black-bin = %{version}-%{release}
 Requires: pypi-black-license = %{version}-%{release}
 Requires: pypi-black-python = %{version}-%{release}
 Requires: pypi-black-python3 = %{version}-%{release}
-Requires: typed_ast
+Requires: pypi(typed_ast)
 BuildRequires : buildreq-distutils3
-Provides: black
-Provides: black-python
-Provides: black-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
 BuildRequires : pypi(click)
 BuildRequires : pypi(mypy_extensions)
 BuildRequires : pypi(pathspec)
 BuildRequires : pypi(platformdirs)
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pytest)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(tomli)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(typed_ast)
 BuildRequires : pypi(typing_extensions)
-BuildRequires : pypi(wheel)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : typed_ast
 BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(wheel)
 Patch1: 0001-drop-upper-version-reqs.patch
 
 %description
@@ -94,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641420706
+export SOURCE_DATE_EPOCH=1641653043
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
