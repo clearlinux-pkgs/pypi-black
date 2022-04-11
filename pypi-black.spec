@@ -4,7 +4,7 @@
 #
 Name     : pypi-black
 Version  : 22.3.0
-Release  : 42
+Release  : 43
 URL      : https://files.pythonhosted.org/packages/ee/1f/b29c7371958ab41a800f8718f5d285bf4333b8d0b5a5a8650234463ee644/black-22.3.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/1f/b29c7371958ab41a800f8718f5d285bf4333b8d0b5a5a8650234463ee644/black-22.3.0.tar.gz
 Summary  : The uncompromising code formatter.
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648658886
+export SOURCE_DATE_EPOCH=1649720187
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
