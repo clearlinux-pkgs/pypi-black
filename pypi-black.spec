@@ -4,7 +4,7 @@
 #
 Name     : pypi-black
 Version  : 22.6.0
-Release  : 47
+Release  : 48
 URL      : https://files.pythonhosted.org/packages/61/11/551b0d067a7e6836fc0997ab36ee46ec65259fea8f30104f4870092f3301/black-22.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/61/11/551b0d067a7e6836fc0997ab36ee46ec65259fea8f30104f4870092f3301/black-22.6.0.tar.gz
 Summary  : The uncompromising code formatter.
