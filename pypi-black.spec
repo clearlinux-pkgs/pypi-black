@@ -4,7 +4,7 @@
 #
 Name     : pypi-black
 Version  : 22.12.0
-Release  : 59
+Release  : 60
 URL      : https://files.pythonhosted.org/packages/a6/59/e873cc6807fb62c11131e5258ca15577a3b7452abad08dc49286cf8245e8/black-22.12.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a6/59/e873cc6807fb62c11131e5258ca15577a3b7452abad08dc49286cf8245e8/black-22.12.0.tar.gz
 Summary  : The uncompromising code formatter.
@@ -70,6 +70,7 @@ Requires: pypi(click)
 Requires: pypi(mypy_extensions)
 Requires: pypi(pathspec)
 Requires: pypi(platformdirs)
+Requires: pypi(tomli)
 
 %description python3
 python3 components for the pypi-black package.
@@ -87,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1672259701
+export SOURCE_DATE_EPOCH=1672393236
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
