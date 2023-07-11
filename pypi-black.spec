@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-black
-Version  : 23.3.0
-Release  : 63
-URL      : https://files.pythonhosted.org/packages/d6/36/66370f5017b100225ec4950a60caeef60201a10080da57ddb24124453fba/black-23.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d6/36/66370f5017b100225ec4950a60caeef60201a10080da57ddb24124453fba/black-23.3.0.tar.gz
+Version  : 23.7.0
+Release  : 64
+URL      : https://files.pythonhosted.org/packages/e9/20/29d7a6614606785923edf9e8ec3ff630231992cc2fabc02eacb0d475372e/black-23.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e9/20/29d7a6614606785923edf9e8ec3ff630231992cc2fabc02eacb0d475372e/black-23.7.0.tar.gz
 Summary  : The uncompromising code formatter.
 Group    : Development/Tools
 License  : MIT Python-2.0
@@ -17,6 +17,8 @@ Requires: pypi-black-python = %{version}-%{release}
 Requires: pypi-black-python3 = %{version}-%{release}
 Requires: pypi(typed_ast)
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(hatch_fancy_pypi_readme)
+BuildRequires : pypi(hatch_vcs)
 BuildRequires : pypi(hatchling)
 BuildRequires : pypi(py)
 BuildRequires : pypi(typed_ast)
@@ -77,10 +79,10 @@ python3 components for the pypi-black package.
 
 
 %prep
-%setup -q -n black-23.3.0
-cd %{_builddir}/black-23.3.0
+%setup -q -n black-23.7.0
+cd %{_builddir}/black-23.7.0
 pushd ..
-cp -a black-23.3.0 buildavx2
+cp -a black-23.7.0 buildavx2
 popd
 
 %build
@@ -88,15 +90,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680187012
+export SOURCE_DATE_EPOCH=1689088534
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 pypi-dep-fix.py . tomli
 python3 -m build --wheel --skip-dependency-check --no-isolation
