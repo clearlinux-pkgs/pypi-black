@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-black
-Version  : 23.7.0
-Release  : 64
-URL      : https://files.pythonhosted.org/packages/e9/20/29d7a6614606785923edf9e8ec3ff630231992cc2fabc02eacb0d475372e/black-23.7.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e9/20/29d7a6614606785923edf9e8ec3ff630231992cc2fabc02eacb0d475372e/black-23.7.0.tar.gz
+Version  : 23.9.1
+Release  : 65
+URL      : https://files.pythonhosted.org/packages/12/c3/257adbdbf2cc60bf844b5c0e3791a9d49e4fb4f7bcd8a2e875824ca0b7bc/black-23.9.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/12/c3/257adbdbf2cc60bf844b5c0e3791a9d49e4fb4f7bcd8a2e875824ca0b7bc/black-23.9.1.tar.gz
 Summary  : The uncompromising code formatter.
 Group    : Development/Tools
 License  : MIT Python-2.0
@@ -31,8 +31,8 @@ BuildRequires : pypi-virtualenv
 %define debug_package %{nil}
 
 %description
-A subset of lib2to3 taken from Python 3.7.0b2.
-Commit hash: 9c17e3a1987004b8bcfbe423953aad84493a7984
+A subset of lib2to3 taken from Python 3.7.0b2. Commit hash:
+9c17e3a1987004b8bcfbe423953aad84493a7984
 
 %package bin
 Summary: bin components for the pypi-black package.
@@ -79,10 +79,10 @@ python3 components for the pypi-black package.
 
 
 %prep
-%setup -q -n black-23.7.0
-cd %{_builddir}/black-23.7.0
+%setup -q -n black-23.9.1
+cd %{_builddir}/black-23.9.1
 pushd ..
-cp -a black-23.7.0 buildavx2
+cp -a black-23.9.1 buildavx2
 popd
 
 %build
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689088534
+export SOURCE_DATE_EPOCH=1694444638
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
