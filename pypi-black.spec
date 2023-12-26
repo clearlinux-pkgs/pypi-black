@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : pypi-black
-Version  : 23.12.0
-Release  : 70
-URL      : https://files.pythonhosted.org/packages/5a/73/618bcfd4a4868d52c02ff7136ec60e9d63bc83911d3d8b4998e42acf9557/black-23.12.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/5a/73/618bcfd4a4868d52c02ff7136ec60e9d63bc83911d3d8b4998e42acf9557/black-23.12.0.tar.gz
+Version  : 23.12.1
+Release  : 71
+URL      : https://files.pythonhosted.org/packages/fd/f4/a57cde4b60da0e249073009f4a9087e9e0a955deae78d3c2a493208d0c5c/black-23.12.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/fd/f4/a57cde4b60da0e249073009f4a9087e9e0a955deae78d3c2a493208d0c5c/black-23.12.1.tar.gz
 Summary  : The uncompromising code formatter.
 Group    : Development/Tools
 License  : MIT Python-2.0
@@ -81,10 +81,10 @@ python3 components for the pypi-black package.
 
 
 %prep
-%setup -q -n black-23.12.0
-cd %{_builddir}/black-23.12.0
+%setup -q -n black-23.12.1
+cd %{_builddir}/black-23.12.1
 pushd ..
-cp -a black-23.12.0 buildavx2
+cp -a black-23.12.1 buildavx2
 popd
 
 %build
@@ -92,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702496173
+export SOURCE_DATE_EPOCH=1703607441
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
