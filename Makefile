@@ -1,5 +1,5 @@
 PKG_NAME := pypi-black
-URL = https://files.pythonhosted.org/packages/ea/19/33d4f2f0babcbc07d3e2c058a64c76606cf19884a600536c837aaf4e4f2d/black-24.1.0.tar.gz
+URL = https://files.pythonhosted.org/packages/77/ec/a429d15d2e7f996203bff98e2b2e84ad4cb3de318de147b0038dc93fbc71/black-24.1.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
